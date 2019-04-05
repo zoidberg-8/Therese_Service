@@ -15,7 +15,7 @@ for (var i = 0; i < 100; ++i) {
     faker.image.imageUrl(),
     faker.image.imageUrl()
   ];
-  db.query(queryStr, params, (err, results) => {
+  db.connection.query(queryStr, params, (err, results) => {
     if (err) {
       console.log(err);
     } else {
