@@ -1,5 +1,6 @@
 import React from 'react';
-import ProductSelected from './ProductSelected.jsx';
+import styles from './Styles.module.css';
+// import ProductSelected from './ProductSelected.jsx';
 
 class ProductSelector extends React.Component {
   constructor(props) {
@@ -8,10 +9,8 @@ class ProductSelector extends React.Component {
 
   render() {
     return (
-    <div>
-      {this.props.product.map((shoe, index) => {
-        <ProductSelected key={index} shoe={shoe} />
-      })}
+    <div className={styles.selector}>
+      <img className={styles.selectImg} src={this.props.shoe.main_img}/>
     </div>
     );
   }
