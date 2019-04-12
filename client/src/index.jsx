@@ -2,18 +2,64 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
 
+import ProductInfo from './Components/ProductInfo.jsx';
+import ProductSelector from './Components/ProductSelector.jsx';
+import ProductView from './Components/ProductView.jsx';
+import styles from './Components/Styles.module.css';
+
 class App extends React.Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      product: [],
+      images: []
+    }
+  }
+
+  componentDidMount() {
+    $.get('/initial', function(product) {})
+    .done((product) => {
+      this.setState({
+        product: product
+      });
+    });
+
+// ${window.location.pathname.slice(1)
+    // $.get(`/api/product/}`, function(product) {})
+    // .done((product) => {
+    //   this.setState({
+    //     product: product
+    //   });
+    // });
+
+    $.get('/api/main', function(images) {})
+    .done((images) => {
+      this.setState({
+        images: images
+      });
+    });
   }
 
   render() {
     return (
       <div>
-        <h1>Will you marry me, Anthony?</h1>
+        <div className={styles.picContainer}>
+          {this.state.product.map((product, index) =>
+          <ProductView key={index} product={product} />
+          )}
+        </div>
+        <div className={styles.productContainer}>
+          {this.state.product.map((product, index) =>
+          <ProductInfo key={index} product={product} />
+          )}
+          {this.state.images.map((image, index) =>
+          <ProductSelector key={index} shoe={image} />
+          )}
+        </div>
       </div>
     );
-  }
+  };
 }
 
-ReactDOM.render(<App />, document.getElementById('app'));
+ReactDOM.render(<App />, document.getElementById('selector'));
