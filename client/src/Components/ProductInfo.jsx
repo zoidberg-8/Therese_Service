@@ -1,10 +1,11 @@
 import React from 'react';
+import styles from './Styles.module.css';
 
-const Product = ({product}) => (
-  <div>
-    <div>{product.category}</div><div>${product.price}</div>
-    <div>Nike Air {product.name}</div>
+const ProductInfo = ({product}) => (
+  <div className={styles.info}>
+    <h2 className={styles.category}>{product.category}</h2><div className={styles.price}>${product.price}</div>
+    <div className={styles.name}>Nike Air {product.name}</div>
   </div>
 );
 
-export default Product;
+export default ProductInfo;
