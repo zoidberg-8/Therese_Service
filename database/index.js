@@ -3,8 +3,18 @@ const mysqlConfig = require('./config.js');
 
 const connection = mysql.createConnection(mysqlConfig);
 
-const getAllImages = function(callback) {
-  connection.query('SELECT * FROM products', (err, results) => {
+const getInitial = function(callback) {
+  connection.query('SELECT * FROM products WHERE id = 1', (err, results) => {
+    if (err) {
+      callback(err, null);
+    }
+    callback(null, results);
+  });
+};
+
+//still working on
+const getProduct = function(id, callback) {
+  connection.query('SELECT * FROM products WHERE id = ?', id, (err, results) => {
     if (err) {
       callback(err, null);
     }
@@ -13,9 +23,8 @@ const getAllImages = function(callback) {
 };
 
 const getAllMains = function(callback) {
-  connection.query('SELECT main_img FROM products', (err, results) => {
+  connection.query('SELECT main_img, id FROM products LIMIT 2, 7', (err, results) => {
     if (err) {
-      console.log('The problem is in the database')
       callback(err, null);
     }
     callback(null, results);
@@ -24,6 +33,7 @@ const getAllMains = function(callback) {
 
 module.exports = {
   connection,
-  getAllImages,
+  getInitial,
+  getProduct,
   getAllMains
 };
