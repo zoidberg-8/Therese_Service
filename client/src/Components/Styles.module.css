@@ -1,0 +1,72 @@
+.picContainer {
+  display: block;
+}
+
+.productContainer {
+  display: block;
+}
+
+.pics {
+  display: flexbox;
+}
+
+.topLeft {
+  height: 843px;
+  width: 674px;
+}
+
+.topRight {
+  height: 843px;
+  width: 674px;
+}
+
+.midLeft {
+  height: 843px;
+  width: 674px;
+}
+
+.midRight {
+  height: 843px;
+  width: 674px;
+}
+
+.botLeft {
+  height: 843px;
+  width: 674px;
+}
+
+.botRight {
+  height: 843px;
+  width: 674px;
+}
+
+.info {
+  width: 500px;
+}
+
+.category {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.price {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.name {
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.007em;
+}
+
+.selector {
+  width: 500px;
+}
+
+.selectImg {
+  height: 125px;
+  width: 125px;
+}
+

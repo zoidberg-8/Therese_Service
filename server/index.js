@@ -10,8 +10,19 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 app.use(express.static(__dirname + '/../client/dist'));
 
-app.get('/api/images', (req, res) => {
-  db.getAllImages((err, results) => {
+app.get('/initial', (req, res) => {
+  db.getInitial((err, results) => {
+    if (err) {
+      console.error('Error for GET request for inital from server');
+    }
+    res.json(results);
+  });
+});
+
+//still working on
+app.get('/api/product/:id', (req, res) => {
+  let id = Number(req.params.id);
+  db.getProduct(id, (err, results) => {
     if (err) {
       console.log('Error for GET request for images from server');
     }
