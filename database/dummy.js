@@ -1,10 +1,10 @@
 const db = require('./index.js');
 const faker = require('faker');
 
-for (var i = 0; i < 100; ++i) {
-  var queryStr = 'INSERT INTO products (name, price, category, product_url, main_img, front_view, back_view, bottom_view, top_view, right_side) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)';
-  var params = [
-    faker.name.findName(),
+for (let i = 0; i < 100; ++i) {
+  let queryStr = 'INSERT INTO products (name, price, category, product_url, main_img, front_view, back_view, bottom_view, top_view, right_side) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)';
+  let params = [
+    faker.lorem.word(),
     faker.commerce.price(),
     faker.lorem.word(),
     faker.internet.url(),
@@ -21,5 +21,5 @@ for (var i = 0; i < 100; ++i) {
     } else {
       console.log(results);
     }
-  })
-}
+  });
+};
