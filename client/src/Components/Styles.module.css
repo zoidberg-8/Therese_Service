@@ -1,72 +1,117 @@
-.picContainer {
+.main {
   display: block;
+  box-sizing: border-box;
+  max-width: 1440px;
+  margin: 0px auto;
+  position: relative;
+}
+
+.picContainer {
+  position: relative;
+  display: inline-block;
+  width: calc(100% - 456px);
+  min-height: 1211px;
+  box-sizing: border-box;
 }
 
 .productContainer {
-  display: block;
+  position: absolute;
+  top: 0px;
+  display: inline-block;
+  width: 456px;
+  box-sizing: border-box;
 }
 
 .pics {
-  display: flexbox;
+  display: block;
+  box-sizing: border-box;
 }
 
-.topLeft {
-  height: 843px;
-  width: 674px;
-}
-
-.topRight {
-  height: 843px;
-  width: 674px;
-}
-
-.midLeft {
-  height: 843px;
-  width: 674px;
-}
-
-.midRight {
-  height: 843px;
-  width: 674px;
-}
-
-.botLeft {
-  height: 843px;
-  width: 674px;
-}
-
-.botRight {
-  height: 843px;
-  width: 674px;
+.pic {
+  height: 433px;
+  width: 347px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-right: 6px;
+  padding-left: 6px;
+  cursor: pointer;
 }
 
 .info {
-  width: 500px;
+  box-sizing: border-box;
+  max-width: 377px;
+  display: flex;
+  width: 100%;
+  padding-top: 4px;
+  padding-bottom: 32px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+}
+
+.headers {
+  flex: 3 1 auto;
+  padding-right: 48px;
+  display: block;
+  box-sizing: border-box;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 400;
 }
 
 .category {
+  display: block;
+  padding-bottom: 4px;
   font-size: 16px;
   line-height: 1.5;
-}
-
-.price {
-  font-size: 16px;
-  line-height: 1.5;
+  box-sizing: border-box;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: normal;
 }
 
 .name {
-  font-size: 26px;
+  display: block;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 28px;
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: 0.007em;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+.price {
+  display: block;
+  box-sizing: border-box;
+  flex: 1 0 auto;
+  text-align: right;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 .selector {
-  width: 500px;
+  display: block;
+  box-sizing: border-box;
+  margin-top: 8px;
+  margin-bottom: 34px;
+  padding-right: 8px;
+  overflow-x: visible;
+  overflow-y: visible;
+  white-space: normal;
+  width: auto;
+  position: relative;
 }
 
 .selectImg {
-  height: 125px;
-  width: 125px;
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  margin-bottom: 0px;
+  height: 69px;
+  width: 69px;
+  padding-right: 4px;
+  cursor: pointer;
 }
-
