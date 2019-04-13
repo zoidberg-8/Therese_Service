@@ -22,21 +22,6 @@
   box-sizing: border-box;
 }
 
-.pics {
-  display: block;
-  box-sizing: border-box;
-}
-
-.pic {
-  height: 433px;
-  width: 347px;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-right: 6px;
-  padding-left: 6px;
-  cursor: pointer;
-}
-
 .info {
   box-sizing: border-box;
   max-width: 377px;
@@ -44,7 +29,7 @@
   width: 100%;
   padding-top: 4px;
   padding-bottom: 32px;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
 }
 
@@ -53,7 +38,7 @@
   padding-right: 48px;
   display: block;
   box-sizing: border-box;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
 }
 
@@ -72,7 +57,7 @@
 
 .name {
   display: block;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 28px;
   font-weight: 500;
   line-height: 1.2;
