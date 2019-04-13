@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
+import styles from './Components/Styles.module.css';
 
 import ProductInfo from './Components/ProductInfo.jsx';
 import ProductSelector from './Components/ProductSelector.jsx';
 import ProductView from './Components/ProductView.jsx';
-import styles from './Components/Styles.module.css';
 
 class App extends React.Component {
   constructor(props) {
@@ -43,7 +43,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className={styles.main}>
         <div className={styles.picContainer}>
           {this.state.product.map((product, index) =>
           <ProductView key={index} product={product} />
@@ -53,9 +53,10 @@ class App extends React.Component {
           {this.state.product.map((product, index) =>
           <ProductInfo key={index} product={product} />
           )}
-          {this.state.images.map((image, index) =>
+          {/* {this.state.images.map((image, index) =>
           <ProductSelector key={index} shoe={image} />
-          )}
+          )} */}
+          <ProductSelector />
         </div>
       </div>
     );
